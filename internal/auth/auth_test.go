@@ -42,7 +42,7 @@ func TestGetAPIKey(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := GetAPIKey(tt.headers)
-			if (err != nil && tt.wantErr == nil) || (err == nil && tt.wantErr != nil) || 
+			if (err != nil && tt.wantErr == nil) || (err == nil && tt.wantErr != nil) ||
 				(err != nil && tt.wantErr != nil && err.Error() != tt.wantErr.Error()) {
 				t.Errorf("GetAPIKey() error = %v, wantErr %v", err, tt.wantErr)
 				return
