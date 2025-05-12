@@ -99,4 +99,5 @@ func main() {
 
 func unused() {
 	// this function is unused
+	// testing staticcheck
 }
