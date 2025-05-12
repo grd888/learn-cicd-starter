@@ -17,10 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install goose
-        run: |
-          curl -L https://github.com/pressly/goose/releases/latest/download/goose_linux_amd64 -o goose
-          chmod +x goose
-          sudo mv goose /usr/local/bin/
+        run: go install github.com/pressly/goose/v3/cmd/goose@latest
     
       - name: Set up Go
         uses: actions/setup-go@v5
